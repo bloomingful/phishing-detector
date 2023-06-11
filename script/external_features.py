@@ -8,11 +8,7 @@ import dns.resolver
 import json
 from urllib.parse import urlencode
 
-#################################################################################################################################
-#               DNSRecord  expiration length
-#################################################################################################################################
-
-def dns_record(domain):
+def dns_record(domain): # column: dns_record
     try:
         nameservers = dns.resolver.resolve(domain,'NS')
         if len(nameservers)>0:
@@ -21,10 +17,6 @@ def dns_record(domain):
             return 1
     except:
         return 1
-
-#################################################################################################################################
-#               Page Rank from OPR
-#################################################################################################################################
 
 def page_rank(key, domain): # column: page_rank
     url = 'https://openpagerank.com/api/v1.0/getPageRank?domains%5B0%5D=' + domain
