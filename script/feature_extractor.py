@@ -33,7 +33,6 @@ def get_domain(url):
     o = urllib.parse.urlsplit(url)
     return o.hostname, tldextract.extract(url).domain, o.path
 
-# print(get_domain('https://www.google.com/imghp'))
 
 def getPageContent(url):
     parsed = urlparse(url)
