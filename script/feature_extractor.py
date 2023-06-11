@@ -430,35 +430,35 @@ def extract_features(url):
         # ctnfe.internal_errors(Href, Link, Media, Form, CSS, Favicon),
         # ctnfe.external_errors(Href, Link, Media, Form, CSS, Favicon)
         ctn5 = ctnfe.login_form(Form)
-        print(f"Presence of login form: {ctn7}")
+        print(f"Presence of login form: {ctn5}")
         ctn6 = ctnfe.external_favicon(Favicon)
-        print(f"Use of external favicon: {ctn8}")
+        print(f"Use of external favicon: {ctn6}")
         ctn7 = ctnfe.links_in_tags(Link)
-        print(f"Percentile of links in tags: {ctn9}")
+        print(f"Percentile of links in tags: {ctn7}")
         # ctnfe.submitting_to_email(Form),
         ctn8 = ctnfe.internal_media(Media)
-        print(f"Ratio of internal media: {ctn10}")
+        print(f"Ratio of internal media: {ctn8}")
         ctn9 = ctnfe.external_media(Media)
-        print(f"Ratio of external media: {ctn11}")
+        print(f"Ratio of external media: {ctn9}")
 
         ### additional content-based features
         # ctnfe.sfh(hostname, Form),
         ctn10 = ctnfe.iframe(IFrame)
-        print(f"Use of invisible <iframe> tags: {ctn12}")
+        print(f"Use of invisible <iframe> tags: {ctn10}")
         ctn11 = ctnfe.popup_window(Text)
-        print(f"Presence of popup window with text field: {ctn13}")
+        print(f"Presence of popup window with text field: {ctn11}")
         ctn12 = ctnfe.safe_anchor(Anchor)
-        print(f"Percentile of safe anchors: {ctn14}")
+        print(f"Percentile of safe anchors: {ctn12}")
         ctn13 = ctnfe.onmouseover(Text)
-        print(f"Presence of onmouseover: {ctn15}")
+        print(f"Presence of onmouseover: {ctn13}")
         ctn14 = ctnfe.right_clic(Text)
-        print(f"Use of ’event.button==2’ to onmouseover: {ctn16}")
+        print(f"Use of ’event.button==2’ to onmouseover: {ctn14}")
         ctn15 = ctnfe.empty_title(Title)
-        print(f"Empty title: {ctn17}")
+        print(f"Empty title: {ctn15}")
         ctn16 = ctnfe.domain_in_title(extracted_domain.domain, Title)
-        print(f"Domain as web title: {ctn18}")
+        print(f"Domain as web title: {ctn16}")
         ctn17 = ctnfe.domain_with_copyright(extracted_domain.domain, Text)
-        print(f"Presence of domain within the copyright: {ctn19}")
+        print(f"Presence of domain within the copyright: {ctn17}")
 
         ### third-party-based features
         # trdfe.whois_registered_domain(domain),
