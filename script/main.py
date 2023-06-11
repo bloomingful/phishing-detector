@@ -8,6 +8,9 @@ df = pd.read_csv('dataset_phishing.csv')
 df.drop(['url', 'status', 'nb_or', 'ratio_nullHyperlinks', 'ratio_intRedirection', 'ratio_intErrors', 'submit_email', 'sfh', "random_domain", "whois_registered_domain", "domain_registration_length", "domain_age", "web_traffic", "google_index"], axis = 1, inplace = True)
 
 website = input("Enter the website: ")
+print("--------------------------")
+print("--------------------------")
+print("--------------------------")
 accessible = fe.is_URL_accessible(website)
 print(accessible)
 
