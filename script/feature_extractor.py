@@ -33,7 +33,6 @@ def get_domain(url):
     o = urllib.parse.urlsplit(url)
     return o.hostname, tldextract.extract(url).domain, o.path
 
-
 def getPageContent(url):
     parsed = urlparse(url)
     url = parsed.scheme+'://'+parsed.netloc
@@ -48,10 +47,8 @@ def getPageContent(url):
     else:    
         return url, page.content
 
-#################################################################################################################################
-#              Data Extraction Process
-#################################################################################################################################
 
+### Data Extraction Process
 def extract_data_from_URL(hostname, content, domain, Href, Link, Anchor, Media, Form, CSS, Favicon, IFrame, Title, Text):
     Null_format = ["", "#", "#nothing", "#doesnotexist", "#null", "#void", "#whatever",
                "#content", "javascript::void(0)", "javascript::void(0);", "javascript::;", "javascript"]
@@ -89,7 +86,6 @@ def extract_data_from_URL(hostname, content, domain, Href, Link, Anchor, Media, 
         else:
             Media['externals'].append(img['src'])
            
-    
     for audio in soup.find_all('audio', src=True):
         dots = [x.start(0) for x in re.finditer('\.', audio['src'])]
         if hostname in audio['src'] or domain in audio['src'] or len(dots) == 1 or not audio['src'].startswith('http'):
@@ -128,7 +124,6 @@ def extract_data_from_URL(hostname, content, domain, Href, Link, Anchor, Media, 
                     Media['internals'].append(hostname+i_frame['src'])   
         else: 
             Media['externals'].append(i_frame['src'])
-           
 
     # collect all link tags
     for link in soup.findAll('link', href=True):
@@ -156,8 +151,7 @@ def extract_data_from_URL(hostname, content, domain, Href, Link, Anchor, Media, 
                     Link['internals'].append(hostname+script['src'])   
         else:
             Link['externals'].append(link['href'])
-           
-            
+
     # collect all css
     for link in soup.find_all('link', rel='stylesheet'):
         dots = [x.start(0) for x in re.finditer('\.', link['href'])]
@@ -205,7 +199,6 @@ def extract_data_from_URL(hostname, content, domain, Href, Link, Anchor, Media, 
         else:
             Form['externals'].append(form['action'])
             
-
     # collect all link tags
     for head in soup.find_all('head'):
         for head.link in soup.find_all('link', href=True):
@@ -243,8 +236,7 @@ def extract_data_from_URL(hostname, content, domain, Href, Link, Anchor, Media, 
                             Favicon['internals'].append(hostname+head.link['href'])   
                  else:
                      Favicon['externals'].append(head.link['href'])
-                     
-                    
+                                 
     # collect i_frame
     for i_frame in soup.find_all('iframe', width=True, height=True, frameborder=True):
         if i_frame['width'] == "0" and i_frame['height'] == "0" and i_frame['frameborder'] == "0":
@@ -274,7 +266,6 @@ def extract_data_from_URL(hostname, content, domain, Href, Link, Anchor, Media, 
     return Href, Link, Anchor, Media, Form, CSS, Favicon, IFrame, Title, Text
 
 def extract_features(url):
-    
     def words_raw_extraction(domain, subdomain, path):
         w_domain = re.split("\-|\.|\/|\?|\=|\@|\&|\%|\:|\_", domain.lower())
         w_subdomain = re.split("\-|\.|\/|\?|\=|\@|\&|\%|\:|\_", subdomain.lower())   
@@ -283,7 +274,6 @@ def extract_features(url):
         w_host = w_domain + w_subdomain
         raw_words = list(filter(None,raw_words))
         return raw_words, list(filter(None,w_host)), list(filter(None,w_path))
-
     
     Href = {'internals':[], 'externals':[], 'null':[]}
     Link = {'internals':[], 'externals':[], 'null':[]}
@@ -488,12 +478,3 @@ def extract_features(url):
         ]
         return row
     return None
-
-# print(extract_features("https://www.google.com"))
-# print(extract_features("http://rgipt.ac.in"))
-# print(extract_features("https://www.brainsconsulting.ro/a/Support/ID-NUMB973/myaccount/signin"))
-# print(extract_features("https://www.belivehotels.com/hotel/PT/home.jsp"))
-# print(extract_features("https://www.computerhope.com/issues/ch000423.htm"))
-
-# print(is_URL_accessible("https://www.google.com"))
-# print(extract_features("https://www.google.com"))
