@@ -11,24 +11,27 @@ website = input("Enter the website: ")
 print("--------------------------")
 print("--------------------------")
 print("--------------------------")
-accessible = fe.is_URL_accessible(website)
-print(accessible)
+state, iurl, page = fe.is_URL_accessible(website)
 
-y = fe.extract_features(website)
+if state:
+    print("Connect: OK")
+    y = fe.extract_features(website)
 
-df.iloc[0] = y
+    df.iloc[0] = y
 
-columns = df.columns.to_list()
-scaler = StandardScaler()
-for column in columns:
-    df[[column]] = scaler.fit_transform(df[[column]])
+    columns = df.columns.to_list()
+    scaler = StandardScaler()
+    for column in columns:
+        df[[column]] = scaler.fit_transform(df[[column]])
 
-with open("svm_tuned.pkl", "rb") as f:
-    clf  = pickle.load(f)
+    with open("svm_tuned.pkl", "rb") as f:
+        clf  = pickle.load(f)
 
-y = df.iloc[0]
-preds = clf.predict([y])
-print("--------------------------")
-print("--------------------------")
-print("--------------------------")
-print(f"The website is considered: {preds[0]}")
+    y = df.iloc[0]
+    preds = clf.predict([y])
+    print("--------------------------")
+    print("--------------------------")
+    print("--------------------------")
+    print(f"The website is considered: {preds[0]}")
+else:
+    print("The website is not accessible. Please check the URL.")
