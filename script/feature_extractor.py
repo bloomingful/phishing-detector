@@ -426,40 +426,38 @@ def extract_features(url):
         ctn4 = ctnfe.external_css(CSS)
         print(f"Number of external CSS: {ctn4}")
         # ctnfe.internal_redirection(Href, Link, Media, Form, CSS, Favicon),
-        ctn5 = ctnfe.external_redirection(Href, Link, Media, Form, CSS, Favicon)
-        print(f"Ratio of external redirections: {ctn5}")
+        # ctnfe.external_redirection(Href, Link, Media, Form, CSS, Favicon)
         # ctnfe.internal_errors(Href, Link, Media, Form, CSS, Favicon),
-        ctn6 = ctnfe.external_errors(Href, Link, Media, Form, CSS, Favicon)
-        print(f"Ratio of external errors: {ctn6}")
-        ctn7 = ctnfe.login_form(Form)
+        # ctnfe.external_errors(Href, Link, Media, Form, CSS, Favicon)
+        ctn5 = ctnfe.login_form(Form)
         print(f"Presence of login form: {ctn7}")
-        ctn8 = ctnfe.external_favicon(Favicon)
+        ctn6 = ctnfe.external_favicon(Favicon)
         print(f"Use of external favicon: {ctn8}")
-        ctn9 = ctnfe.links_in_tags(Link)
+        ctn7 = ctnfe.links_in_tags(Link)
         print(f"Percentile of links in tags: {ctn9}")
         # ctnfe.submitting_to_email(Form),
-        ctn10 = ctnfe.internal_media(Media)
+        ctn8 = ctnfe.internal_media(Media)
         print(f"Ratio of internal media: {ctn10}")
-        ctn11 = ctnfe.external_media(Media)
+        ctn9 = ctnfe.external_media(Media)
         print(f"Ratio of external media: {ctn11}")
 
         ### additional content-based features
         # ctnfe.sfh(hostname, Form),
-        ctn12 = ctnfe.iframe(IFrame)
+        ctn10 = ctnfe.iframe(IFrame)
         print(f"Use of invisible <iframe> tags: {ctn12}")
-        ctn13 = ctnfe.popup_window(Text)
+        ctn11 = ctnfe.popup_window(Text)
         print(f"Presence of popup window with text field: {ctn13}")
-        ctn14 = ctnfe.safe_anchor(Anchor)
+        ctn12 = ctnfe.safe_anchor(Anchor)
         print(f"Percentile of safe anchors: {ctn14}")
-        ctn15 = ctnfe.onmouseover(Text)
+        ctn13 = ctnfe.onmouseover(Text)
         print(f"Presence of onmouseover: {ctn15}")
-        ctn16 = ctnfe.right_clic(Text)
+        ctn14 = ctnfe.right_clic(Text)
         print(f"Use of ’event.button==2’ to onmouseover: {ctn16}")
-        ctn17 = ctnfe.empty_title(Title)
+        ctn15 = ctnfe.empty_title(Title)
         print(f"Empty title: {ctn17}")
-        ctn18 = ctnfe.domain_in_title(extracted_domain.domain, Title)
+        ctn16 = ctnfe.domain_in_title(extracted_domain.domain, Title)
         print(f"Domain as web title: {ctn18}")
-        ctn19 = ctnfe.domain_with_copyright(extracted_domain.domain, Text)
+        ctn17 = ctnfe.domain_with_copyright(extracted_domain.domain, Text)
         print(f"Presence of domain within the copyright: {ctn19}")
 
         ### third-party-based features
@@ -474,7 +472,7 @@ def extract_features(url):
         print(f"Openpagerank: {trd2}")
 
         row = [
-            url1, url2, url3, url4, url5, url6, url7, url8, url9, url10, url11, url12, url13, url14, url15, url16, url17, url18, url19, url20, url21, url22, url23, url24, url25, url26, url27, url28, url29, url30, url31, url32, url33, url34, url35, url36, url37, url38, url39, url40, url41, url42, url43, url44, url45, url46, url47, url48, url49, url50, url51, url52, url53, url54, ctn1, ctn2, ctn3, ctn4, ctn5, ctn6, ctn7, ctn8, ctn9, ctn10, ctn11, ctn12, ctn13, ctn14, ctn15, ctn16, ctn17, ctn18, ctn19, trd1, trd2
+            url1, url2, url3, url4, url5, url6, url7, url8, url9, url10, url11, url12, url13, url14, url15, url16, url17, url18, url19, url20, url21, url22, url23, url24, url25, url26, url27, url28, url29, url30, url31, url32, url33, url34, url35, url36, url37, url38, url39, url40, url41, url42, url43, url44, url45, url46, url47, url48, url49, url50, url51, url52, url53, url54, ctn1, ctn2, ctn3, ctn4, ctn5, ctn6, ctn7, ctn8, ctn9, ctn10, ctn11, ctn12, ctn13, ctn14, ctn15, ctn16, ctn17, trd1, trd2
         ]
         return row
     return None
