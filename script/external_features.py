@@ -1,11 +1,5 @@
-from datetime import datetime
-from bs4 import BeautifulSoup
 import requests
-import whois
-import time
-import re
 import dns.resolver
-import json
 from urllib.parse import urlencode
 
 def dns_record(domain): # column: dns_record
