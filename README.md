@@ -14,7 +14,7 @@ Visit Flask's [documentation](https://flask.palletsprojects.com/en/).
 The back-end uses machine learning model to predict the legitimacy of the website.
 
 ## Usage
-You can either execute the Python program or use the web app.
+You can either execute the Python program directly or use the web app.
 
 ### Python script
 In the command terminal, run the following commands:
@@ -34,7 +34,7 @@ Visit Git's [official documentaion](https://git-scm.com/book/en/v2/Getting-Start
 **Node.js**: To install the required dependencies, you'll need npm, which is included when installing Node.js.\
 Visit Node.js [website](https://nodejs.org/en/download) to install.
 
-In the command terminal, run the following commands:
+Make sure that you're using command prompt and not Powershell. In the terminal, run the following commands:
 
     $ git clone https://github.com/bluemberg/phishing-detector-backend.git phishing-detector
     $ cd phishing-detector/client
@@ -45,9 +45,10 @@ In the command terminal, run the following commands:
     $ pip install flask
     $ pip3 install -r requirements.txt
     $ python server.py
-    
+
+
 Open another instance of terminal (without closing the previous one) inside `phishing-detector/client` folder. Then run:
     
     $ npm start
 
-Note that these commands are Windows-only.
+Note that you might have to change some commands if you're using MacOS.
