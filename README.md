@@ -26,7 +26,7 @@ Using the Python script directly:
     $ python main.py
     
 ### Web app
-This guide assumes you have Git and Node.js installed.
+This guide assumes you have Python, Git and Node.js installed.
 
 **Git**: To clone and run this repository, you'll need to install Git.\
 Visit Git's [official documentaion](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) to get started with installation.
