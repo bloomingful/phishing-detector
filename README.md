@@ -17,7 +17,7 @@ The back-end uses machine learning model to predict the legitimacy of the websit
 You can either execute the Python program or use the web app.
 
 ### Python script
-Using the Python script directly:
+In the command terminal, run the following commands:
 
     $ git clone https://github.com/bluemberg/phishing-detector-backend.git phishing-detector
     $ cd phishing-detector/flask-server/
