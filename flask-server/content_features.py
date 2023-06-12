@@ -1,4 +1,3 @@
-import requests
 import re
 
 def nb_hyperlinks(Href, Link, Media, Form, CSS, Favicon): # column: nb_hyperlinks

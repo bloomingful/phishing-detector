@@ -1,6 +1,5 @@
 import requests
 import dns.resolver
-from urllib.parse import urlencode
 
 def dns_record(domain): # column: dns_record
     try:
