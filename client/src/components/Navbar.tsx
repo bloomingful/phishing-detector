@@ -1,6 +1,6 @@
 import React from 'react';
 
-const THEMES = ["light", "dark", "cupcake"];
+const THEMES = ["light", "dark", "cupcake", "synthwave"];
 
 export default function Header() {
   const [theme, setTheme] = React.useState('light');
@@ -37,11 +37,11 @@ export default function Header() {
             </ul>
           </div>
           <div className="navbar-end">
-            <div className="dropdown dropdown-end dropdown-hover">
+            <div className="dropdown dropdown-end">
               <label tabIndex={0} className="btn">
                 {THEMES.length} Themes
               </label>
-              <ul tabIndex={0} className="dropdown-content mt-1 w-52 max-h-96 overflow-y-auto menu menu-compact p-2  bg-base-200 shadow rounded-box">
+              <ul tabIndex={0} className="dropdown-content mt-1 w-52 max-h-96 overflow-y-auto menu menu-compact p-2 bg-base-200 shadow rounded-box">
                 {
                   THEMES.map((theme, i) => <li key={theme + i}><button data-set-theme={theme} onClick={handleThemeChange} className="font-medium capitalize">{i + 1 + '. ' + theme}</button></li>)
                 }
