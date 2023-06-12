@@ -7,8 +7,10 @@ import Footer from "../components/Footer";
 const LandingPage = () => {
   return (
     <div>
-      <Navbar></Navbar>
-        <CheckPhishPage></CheckPhishPage>
+        <Navbar></Navbar>
+        <div>
+          <CheckPhishPage></CheckPhishPage>
+        </div>
         <Footer></Footer>
     </div>
   );
