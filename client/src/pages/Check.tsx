@@ -48,8 +48,10 @@ const CheckPhishPage = () => {
                 </button>
             </div>
             {showResult && (
-                <div className="border border-gray-300 rounded-md p-4 mb-40">
-                    <p>{showResult}</p>
+                <div className="md:h-[200px]">
+                  <div className="border border-2 border-gray-300 rounded-md p-4 mb-40">
+                      <p className="text-xl">{showResult}</p>
+                  </div>
                 </div>
             )}
         </div>
