@@ -1,6 +1,6 @@
 # Phishing Detector
 
-A python program that detects and analyzes fraudulent and phishing websites.
+A web application for detecting and analyzing fraudulent and phishing websites.
 
 ## Build
 The web application is built using React library and Tailwind CSS framework with daisyUI plugin.\
