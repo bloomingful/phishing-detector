@@ -31,7 +31,7 @@ const CheckPhishPage = () => {
     <section>
       <div className="container">
         <div className="h-96 md:h-[568px] flex flex-col items-center justify-center">
-            <h1 className="text-4xl font-bold mb-8">Phishing Detector</h1>
+            <h1 className="text-4xl font-bold mb-8">Real-Time URL Checker</h1>
             <div className="flex items-center mb-8">
                 <input
                 type="text"
