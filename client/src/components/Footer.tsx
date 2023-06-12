@@ -27,7 +27,7 @@ export default function Footer() {
             <p>© 2023.</p>
           </div>
           <div className="grid grid-flow-col gap-4">
-            <a href="https://github.com/bluemberg/phishing-detector-backend" className="btn btn-sm btn-github">
+            <a href="https://github.com/bluemberg/phishing-detector" className="btn btn-sm btn-github">
                 <FaGithub className="inline-block mr-2" />
                 Github
             </a>
