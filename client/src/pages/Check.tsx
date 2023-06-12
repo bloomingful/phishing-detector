@@ -36,12 +36,12 @@ const CheckPhishPage = () => {
                 <input
                 type="text"
                 placeholder="Enter URL or IP address"
-                className="w-96 h-12 px-4 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-96 h-16 px-4 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 value={inputText}
                 onChange={handleInputChange}
                 />
                 <button
-                className="h-12 px-6 bg-blue-500 text-white font-bold rounded-r-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 "
+                className="h-16 px-6 bg-blue-500 text-white font-bold rounded-r-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 "
                 onClick={handleCheckClick}
                 >
                 Check
