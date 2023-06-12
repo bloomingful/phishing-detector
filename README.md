@@ -16,8 +16,6 @@ Using the Python script directly:
 ### Web app
 Building the web app:
 
-Windows:
-
     $ git clone https://github.com/bluemberg/phishing-detector-backend.git phishing-detector
     $ cd phishing-detector/client
     $ npm install
@@ -26,4 +24,8 @@ Windows:
     $ flask\Scripts\activate.bat
     $ pip install flask
     $ pip3 install -r requirements.txt
-  
+    $ python server.py
+    
+Open another instance of terminal inside `phishing-detector/client` folder. Then run:
+    
+    $ npm start
