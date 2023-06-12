@@ -14,7 +14,7 @@ Visit Flask's [documentation](https://flask.palletsprojects.com/en/).
 The back-end uses machine learning model to predict the legitimacy of the website.
 
 ## Usage
-You can either execute the Python program or use the web app.
+You can either execute the Python program directly or use the web app.
 
 ### Python script
 In the command terminal, run the following commands:
