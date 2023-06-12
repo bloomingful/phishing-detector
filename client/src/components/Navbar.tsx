@@ -33,7 +33,7 @@ export default function Header() {
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal p-0 font-medium">
               <li><a href="#!">Home</a></li>
-              <li><a href="#!">About</a></li>
+              <li><a href="https://github.com/bluemberg/phishing-detector">About</a></li>
             </ul>
           </div>
           <div className="navbar-end">
