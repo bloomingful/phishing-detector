@@ -24,4 +24,6 @@ Windows:
     $ cd ../flask-server
     $ virtualenv flask
     $ flask\Scripts\activate.bat
+    $ pip install flask
+    $ pip3 install -r requirements.txt
   
