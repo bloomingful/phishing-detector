@@ -51,4 +51,4 @@ Open another instance of terminal (without closing the previous one) inside `phi
     
     $ npm start
 
-Note that these commands are Windows-only.
+Note that you might have to change some commands if you're using MacOS.
