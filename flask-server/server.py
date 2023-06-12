@@ -40,7 +40,9 @@ def reverse_text():
         # print("--------------------------")
         # print("--------------------------")
         # print("--------------------------")
-        return jsonify({'result': preds[0]})
+        result = "The website is: " + preds[0]
+        print(result)
+        return jsonify({'result': result})
     else:
         return jsonify({'result': "The website is not accessible. Please check the URL."})
 
