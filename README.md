@@ -3,10 +3,9 @@
 A python program that detects and analyzes fraudulent and phishing websites.
 
 ## Build
-The web application is built using React library. Tailwind CSS UI framework is used for styling with daisyUI plugin.\
+The web application is built using React library and Tailwind CSS framework with daisyUI plugin.\
 Visit React's [documentation](https://react.dev/reference/react).\
-Go to Tailwind CSS [docs](https://tailwindcss.com/docs/).
-Read daisyUI's [docs](https://daisyui.com/docs).
+Go to Tailwind CSS [docs](https://tailwindcss.com/docs/) and read daisyUI's [docs](https://daisyui.com/docs).
 
 JS front-end with Python back-end is made possible using Flask web framework.\
 Visit Flask's [documentation](https://flask.palletsprojects.com/en/).
@@ -15,7 +14,7 @@ Visit Flask's [documentation](https://flask.palletsprojects.com/en/).
 The back-end uses machine learning model to predict the legitimacy of the website.
 
 ## Usage
-You can either execture the Python program or use the web app.
+You can either execute the Python program or use the web app.
 
 ### Python script
 Using the Python script directly:
@@ -27,7 +26,15 @@ Using the Python script directly:
     $ python main.py
     
 ### Web app
-Building the web app:
+This guide assumes you have Git and Node.js installed.
+
+**Git**: To clone and run this repository, you'll need to install Git.\
+Visit Git's [official documentaion](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) to get started with installation.
+
+**Node.js**: To install the required dependencies, you'll need npm, which is included when installing Node.js.\
+Visit Node.js [website](https://nodejs.org/en/download) to install.
+
+In the command terminal, run the following commands:
 
     $ git clone https://github.com/bluemberg/phishing-detector-backend.git phishing-detector
     $ cd phishing-detector/client
