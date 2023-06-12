@@ -31,7 +31,7 @@ const CheckPhishPage = () => {
   return (
     <section>
       <div className="container">
-        <div className="h-96 md:h-[570px] flex flex-col items-center justify-center">
+        <div className="h-96 md:h-[568px] flex flex-col items-center justify-center">
             <h1 className="text-4xl font-bold mb-8">Phishing Detector</h1>
             <div className="flex items-center mb-8">
                 <input
@@ -42,7 +42,7 @@ const CheckPhishPage = () => {
                 onChange={handleInputChange}
                 />
                 <button
-                className="h-12 px-6 bg-blue-500 text-white font-bold rounded-r-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="h-12 px-6 bg-blue-500 text-white font-bold rounded-r-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 "
                 onClick={handleCheckClick}
                 >
                 Check
