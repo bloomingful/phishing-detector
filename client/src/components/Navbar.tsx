@@ -25,15 +25,15 @@ export default function Header() {
               </label>
               <ul tabIndex={0} className="dropdown-content mt-1 w-52 menu menu-compact p-2 bg-base-200 shadow rounded-box">
                 <li><a href="#!">Home</a></li>
-                <li><a href="#!">Dashboard</a></li>
+                <li><a href="#!">About</a></li>
               </ul>
             </div>
-            <a className="btn btn-ghost normal-case text-2xl">Phishing Detector</a>
+            <a className="btn btn-ghost normal-case text-2xl">PhishingDetector</a>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal p-0 font-medium">
               <li><a href="#!">Home</a></li>
-              <li><a href="#!">Dashboard</a></li>
+              <li><a href="#!">About</a></li>
             </ul>
           </div>
           <div className="navbar-end">

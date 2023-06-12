@@ -1,12 +1,16 @@
 import React from "react";
 
-import BasePage from "./BasePage";
+import Navbar from "../components/Navbar";
+import CheckPhishPage from "./Check";
 
 const LandingPage = () => {
   return (
-      <BasePage>
-        Landing page
-      </BasePage>
+      <div>
+        <Navbar></Navbar>
+        <div>
+          <CheckPhishPage></CheckPhishPage>
+        </div>
+      </div>
   );
 };
 

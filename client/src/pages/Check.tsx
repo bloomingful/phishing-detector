@@ -1,0 +1,57 @@
+import React, { useState } from "react";
+
+const CheckPhishPage = () => {
+  const [inputText, setInputText] = useState("");
+  const [showResult, setShowResult] = useState(false);
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setInputText(event.target.value);
+  };
+
+  const handleCheckClick = async () => {
+    try {
+        const response = await fetch('/reverse', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ text: inputText }),
+        });
+  
+        if (response.ok) {
+          const data = await response.json();
+          setShowResult(data.result);
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
+  };
+
+  return (
+    <div className="flex flex-col items-center justify-center h-screen">
+      <h1 className="text-4xl font-bold mb-8">Phishing Detector</h1>
+      <div className="flex items-center mb-8">
+        <input
+          type="text"
+          placeholder="Enter URL or IP address"
+          className="w-96 h-12 px-4 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          value={inputText}
+          onChange={handleInputChange}
+        />
+        <button
+          className="h-12 px-6 bg-blue-500 text-white font-bold rounded-r-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          onClick={handleCheckClick}
+        >
+          Check
+        </button>
+      </div>
+      {showResult && (
+        <div className="border border-gray-300 rounded-md p-4">
+            <p>The website is: {showResult}</p>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default CheckPhishPage;
