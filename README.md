@@ -34,7 +34,7 @@ Visit Git's [official documentaion](https://git-scm.com/book/en/v2/Getting-Start
 **Node.js**: To install the required dependencies, you'll need npm, which is included when installing Node.js.\
 Visit Node.js [website](https://nodejs.org/en/download) to install.
 
-In the command prompt terminal, run the following commands:
+Make sure that you're using command prompt and not Powershell. In the terminal, run the following commands:
 
     $ git clone https://github.com/bluemberg/phishing-detector-backend.git phishing-detector
     $ cd phishing-detector/client
@@ -46,7 +46,6 @@ In the command prompt terminal, run the following commands:
     $ pip3 install -r requirements.txt
     $ python server.py
 
-If the virtual environment does not activate, make sure that you're using command prompt and not Powershell.
 
 Open another instance of terminal (without closing the previous one) inside `phishing-detector/client` folder. Then run:
     
