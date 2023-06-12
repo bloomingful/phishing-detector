@@ -5,12 +5,10 @@ import CheckPhishPage from "./Check";
 
 const LandingPage = () => {
   return (
-      <div>
+    <div>
         <Navbar></Navbar>
-        <div>
-          <CheckPhishPage></CheckPhishPage>
-        </div>
-      </div>
+        <CheckPhishPage></CheckPhishPage>
+    </div>
   );
 };
 
