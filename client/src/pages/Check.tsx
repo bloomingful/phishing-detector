@@ -39,7 +39,7 @@ const CheckPhishPage = () => {
             <div className="flex items-center mb-8">
                 <input
                 type="text"
-                placeholder="Enter URL or IP address"
+                placeholder="Enter URL (https://... or http://...)"
                 className="w-96 h-16 px-4 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 value={inputText}
                 onChange={handleInputChange}
