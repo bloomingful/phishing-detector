@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import Modal from 'react-modal';
 
 const CheckPhishPage = () => {
   const [inputText, setInputText] = useState("");
   const [showResult, setShowResult] = useState(false);
-
+  const [isOpen, setIsOpen] = useState(false);
+  
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setInputText(event.target.value);
   };
@@ -21,8 +23,10 @@ const CheckPhishPage = () => {
         if (response.ok) {
           const data = await response.json();
           setShowResult(data.result);
+          setIsOpen(true);
         }
       } catch (error) {
+        setIsOpen(true);
         console.error('Error:', error);
       }
   };
@@ -47,13 +51,46 @@ const CheckPhishPage = () => {
                 Check
                 </button>
             </div>
-            {showResult && (
-                <div className="md:h-[200px]">
-                  <div className="border border-2 border-gray-300 rounded-md p-4 mb-40">
-                      <p className="text-xl">{showResult}</p>
+            {isOpen ? (
+                <>
+                <div
+                  className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+                >
+                  <div className="relative w-auto my-6 mx-auto max-w-3xl">
+                    {/*content*/}
+                    <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-base-100 outline-none focus:outline-none">
+
+                      {/*header*/}
+                      <div className="flex items-start justify-between p-5 border-b border-dashed border-gray-600 rounded-t">
+                        <h3 className="text-3xl">
+                          Result
+                        </h3>
+                      </div>
+
+                      {/*body*/}
+                      <div className="relative p-6 flex-auto">
+                        <p className="my-4 text-lg leading-relaxed">
+                          {showResult}
+                        </p>
+                      </div>
+
+                      {/*footer*/}
+                      <div className="flex items-center justify-end p-6 border-t border-dashed border-gray-600 rounded-b">
+                        <button
+                          className="bg-error text-white font-bold rounded-r-md uppercase text-sm px-6 py-3 rounded mr-1 mb-1 hover:bg-error focus:outline-none focus:ring-2 focus:ring-red-500 ease-linear transition-all duration-150"
+                          type="button"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          Close
+                        </button>
+                      </div>
+
+                    </div>
                   </div>
                 </div>
-            )}
+                <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+              </>
+            ) : null}
         </div>
       </div>
     </section>
