@@ -19,7 +19,7 @@ You can either execute the Python program directly or use the web app.
 ### Python script
 In the command terminal, run the following commands:
 
-    $ git clone https://github.com/bluemberg/phishing-detector-backend.git phishing-detector
+    $ git clone https://github.com/bluemberg/phishing-detector.git phishing-detector
     $ cd phishing-detector/flask-server/
     $ pip3 install -r requirements.txt
     $ cd script/
@@ -36,7 +36,7 @@ Visit Node.js [website](https://nodejs.org/en/download) to install.
 
 Make sure that you're using command prompt and not Powershell. In the terminal, run the following commands:
 
-    $ git clone https://github.com/bluemberg/phishing-detector-backend.git phishing-detector
+    $ git clone https://github.com/bluemberg/phishing-detector.git phishing-detector
     $ cd phishing-detector/client
     $ npm install
     $ cd ../flask-server
