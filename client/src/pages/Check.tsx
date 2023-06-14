@@ -87,7 +87,7 @@ const CheckPhishPage = () => {
 
                       {/*header*/}
                       <div className="flex items-start justify-between p-5 border-b border-dashed border-gray-600 rounded-t">
-                        <h3 className="text-3xl">
+                        <h3 className="text-2xl font-bold">
                           Result
                         </h3>
                       </div>
@@ -102,7 +102,7 @@ const CheckPhishPage = () => {
                       {/*footer*/}
                       <div className="flex items-center justify-end p-6 border-t border-dashed border-gray-600 rounded-b">
                         <button
-                          className="bg-error text-white font-bold rounded-r-md uppercase text-sm px-6 py-3 rounded mr-1 mb-1 hover:bg-error focus:outline-none focus:ring-2 focus:ring-red-500 ease-linear transition-all duration-150"
+                          className="bg-error text-white font-bold rounded-r-md uppercase text-sm px-6 py-3 rounded mr-1 mb-1 hover:bg-error focus:outline-none focus:ring-2 focus:ring-red-400 ease-linear transition-all duration-150"
                           type="button"
                           onClick={() => setIsOpen(false)}
                         >
