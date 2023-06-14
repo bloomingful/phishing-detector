@@ -4,6 +4,7 @@ import Modal from 'react-modal';
 const CheckPhishPage = () => {
   const [inputText, setInputText] = useState("");
   const [showResult, setShowResult] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -12,6 +13,7 @@ const CheckPhishPage = () => {
 
   const handleCheckClick = async () => {
     try {
+        setIsLoading(true);
         const response = await fetch('/reverse', {
           method: 'POST',
           headers: {
@@ -23,10 +25,10 @@ const CheckPhishPage = () => {
         if (response.ok) {
           const data = await response.json();
           setShowResult(data.result);
+          setIsLoading(false);
           setIsOpen(true);
         }
       } catch (error) {
-        setIsOpen(true);
         console.error('Error:', error);
       }
   };
@@ -48,7 +50,30 @@ const CheckPhishPage = () => {
                 className="h-16 px-6 bg-blue-500 text-white font-bold rounded-r-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 "
                 onClick={handleCheckClick}
                 >
-                Check
+                {isLoading ? (
+                  <svg
+                    className="w-6 h-6 mx-auto animate-spin"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                    ></circle>
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm12 0a8 8 0 100-16 8 8 0 000 16z"
+                    ></path>
+                  </svg>
+                ) : (
+                  "Check"
+                )}
                 </button>
             </div>
             {isOpen ? (
